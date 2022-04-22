@@ -3,6 +3,7 @@ const express = require("express");
 const connect = require("./config/db");
 const {login, register} = require("./controllers/auth.controller");
 const userController = require("./controllers/user.controller");
+const artController = require("./controllers/showArt.controller")
 
 const cors = require("cors");
 
@@ -19,7 +20,7 @@ app.use(express.json());
 app.use("/users", userController);
 
 //product of art controller
-
+app.use("/",artController);
 
 //login and register controller
 app.post("/login", login)

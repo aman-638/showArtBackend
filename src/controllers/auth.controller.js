@@ -29,7 +29,7 @@ const login = async (req, res)=>{
 
         const token = newToken(user);
 
-        return res.status(200).json({msg: "Login Successful", nickName:user.nickName, profileImage: user.profileImage, token});
+        return res.status(200).json({msg: "Login Successful", nickName:user.nickName, profileImage: user.profileImage,user_id:user._id,token});
     } catch (err) {
         return res.status(500).send(err.message);
     }
