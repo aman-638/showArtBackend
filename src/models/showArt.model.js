@@ -9,7 +9,7 @@ const showArtSchema = new mongoose.Schema(
      category:{type:String,required:true},
      artist_name:{type:String,required:true},
      city:{type:String,required:true},
-     phone:{type:String,required:true},
+     phone:{type:Number,required:true,maxlength:10},
      email:{type:String,required:true},
      user_id:{
         type: mongoose.Schema.Types.ObjectId,
